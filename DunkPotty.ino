@@ -36,8 +36,9 @@ int TIMEOUT = 120; // seconds before config portal times out
 void setup() {
   WiFi.mode(WIFI_STA); // explicitly set mode, ESP defaults to STA+AP
   Serial.begin(115200);
-  pinMode(msgButtonPin, INPUT_PULLUP); // Configure the button pin as input with a pull-up
-  pinMode(configButtonPin, INPUT_PULLUP); // Configure the button pin as input with a pull-up
+  // Configure the button pins
+  pinMode(msgButtonPin, INPUT_PULLUP);
+  pinMode(configButtonPin, INPUT_PULLUP);
   secured_client.setTrustAnchors(&cert); // Add root certificate for api.telegram.org
   configTime(0, 0, "pool.ntp.org"); // get UTC time via NTP
   wifiManager.setConfigPortalTimeout(TIMEOUT);
@@ -71,5 +72,6 @@ void loop() {
     wifiManager.startConfigPortal("DunkConfigPortal", "GottaPotty!");
   }
   lastConfigButtonState = configButtonState;
-  delay(100); // Short delay to debounce the button
+  
+  delay(100); // Short delay to debounce the buttons
 }
