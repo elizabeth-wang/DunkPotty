@@ -6,7 +6,7 @@ Being Requirements:
 Hardware Required:
   - ESP8266 Wifi module
   - 3 x Button
-  - 7.5k ohms resistance
+  - 3x 220 ohms resistors
   - 5V Power
 
 Button Functions:
