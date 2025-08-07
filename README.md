@@ -5,6 +5,11 @@ Being Requirements:
 
 Hardware Required:
   - ESP8266 Wifi module
-  - 1 x Button
-  - 1 x 330-ohm resistor
+  - 3 x Button
+  - 7.5k ohms resistance
   - 5V Power
+
+Button Functions:
+  - Send Telegram Message
+  - Open an Access Point on demand
+  - Hardware reset
