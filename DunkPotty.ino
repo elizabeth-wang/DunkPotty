@@ -28,7 +28,7 @@ WiFiManager wifiManager;
 
 // GPIO pin for the msg button
 const int msgButtonPin = D1;
-const int configButtonPin = D2;
+const int configButtonPin = D7;
 bool lastMsgButtonState = HIGH;
 bool lastConfigButtonState = HIGH;
 int TIMEOUT = 120; // seconds before config portal times out
